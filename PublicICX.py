@@ -4,7 +4,7 @@ from datetime import datetime
 from netmiko import ConnectHandler
 import logging
 from getpass import getpass
-logging.basicConfig(filename="addedfunction.txt", level=logging.DEBUG)
+logging.basicConfig(filename="log.txt", level=logging.DEBUG)
 host = input("Enter your hostname: ")
 
 
@@ -16,7 +16,7 @@ device = {
     'global_delay_factor': 2,
 }
 
-cmd = 'copy scp flash 192.168.20.96 SPS08095kufi.bin secondary'
+cmd = 'copy scp flash **IP ADDRESS* SPS08095kufi.bin secondary'
 scp_rest = 250
 flash_rest = 400
 reset_counter = 0
